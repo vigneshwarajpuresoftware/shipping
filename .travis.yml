@@ -22,7 +22,7 @@ after_success:
 - docker buildx use shippingbk
 - docker buildx inspect --bootstrap
 - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASS}
-- docker buildx build -t ajv21/shipping:latest --platform linux/arm64,linux/amd64 --push .
+- docker buildx build -t ajv21/shipping:latest --platform linux/amd64 --push .
 - docker buildx rm shippingbk
 notifications:
   slack:
