@@ -35,4 +35,6 @@ for m in ./docker/*/; do
       --build-arg BUILD_DATE=$BUILD_DATE \
       --build-arg COMMIT=$COMMIT \
       -t ${REPO}:${COMMIT} $CODE_DIR/$m;
+    echo $REPO
+    echo $CODE_DIR
 done;
